@@ -1,15 +1,17 @@
 # Calcula Fácil (Easy Calc)
 
-Aplicativo Android de cálculos rápidos, com interface em português e identidade visual em tons de azul. A primeira ferramenta é o cálculo de IMC; um segundo item já aparece no menu como “Em desenvolvimento”.
+Aplicativo Android de cálculos rápidos, com interface em português brasileiro e inglês e identidade visual em tons de azul. A primeira ferramenta é o cálculo de IMC; um segundo item já aparece no menu como “Em desenvolvimento”.
 
 ## O que já está implementado
 
 - Tela inicial com acesso ao IMC, item de próxima funcionalidade e configurações.
-- Formulário de IMC com peso em quilogramas e altura em centímetros. Aceita vírgula ou ponto como separador decimal, valida os dois valores e habilita **Calcular** apenas quando ambos são válidos.
-- Resultado com IMC e categoria adulta: abaixo do peso, peso ideal, acima do peso e obesidade classes I, II e III.
+- Idioma selecionável entre português brasileiro, inglês e o idioma do dispositivo. No modo automático, idiomas diferentes de pt-BR e inglês usam inglês.
+- Unidade de medida selecionável entre métrico (padrão) e imperial.
+- Formulário de IMC métrico com peso em quilogramas e altura em centímetros; no modo imperial, peso em libras e altura em pés e polegadas. Aceita vírgula ou ponto como separador decimal e só habilita **Calcular** com valores válidos.
+- Resultado com IMC e categoria adulta, além de uma tabela com as faixas de peso correspondentes à altura informada, convertida para a unidade selecionada.
 - Ação **Calcular novamente**, que limpa os campos, e retorno ao menu pela seta superior ou pelo botão Voltar do Android.
-- Preferência de tema claro, escuro ou conforme o dispositivo, salva localmente.
-- Rodapé “Desenvolvido por Rafael Luis - 2026”.
+- Preferências de tema e unidade salvas localmente; idioma integrado às preferências de idioma do Android.
+- Botão **Sobre / About** nas configurações com os créditos do aplicativo.
 
 ## Abrir e compilar
 
@@ -27,6 +29,6 @@ O app usa `minSdk 23`, `compileSdk 36` e `targetSdk 36`. O `targetSdk` atende ao
 
 ## IMC e limites
 
-O cálculo é `peso (kg) / altura (m)²`. As categorias adultas seguem as faixas publicadas pela Organização Mundial da Saúde: abaixo de 18,5; 18,5–24,9; 25,0–29,9; 30,0–34,9; 35,0–39,9; e 40,0 ou mais. O resultado é apresentado como referência, não como diagnóstico. Os pontos de corte adultos não se aplicam da mesma forma a crianças e adolescentes.
+No sistema métrico, o cálculo é `peso (kg) / altura (m)²`; no imperial, é `peso (lb) × 703 / altura (in)²`. As categorias adultas seguem os limites de IMC: abaixo de 18,5; 18,5–<25; 25–<30; 30–<35; 35–<40; e 40 ou mais. A tabela converte esses limites em faixas de peso na unidade selecionada para a altura informada. O resultado é apresentado como referência, não como diagnóstico. Os pontos de corte adultos não se aplicam da mesma forma a crianças e adolescentes.
 
-Fontes: [OMS — Nutrition for a healthy life](https://www.who.int/europe/news-room/fact-sheets/item/nutrition---maintaining-a-healthy-lifestyle) · [Google Play — requisito de nível de API](https://developer.android.com/google/play/requirements/target-sdk)
+Fontes: [OMS — Nutrition for a healthy life](https://www.who.int/europe/news-room/fact-sheets/item/nutrition---maintaining-a-healthy-lifestyle) · [CDC — fórmula do IMC métrico e imperial](https://www.cdc.gov/growth-chart-training/hcp/using-bmi/calculating-bmi.html) · [Google Play — requisito de nível de API](https://developer.android.com/google/play/requirements/target-sdk) · [Android — idiomas por aplicativo](https://developer.android.com/guide/topics/resources/app-languages)
