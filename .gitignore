@@ -1,0 +1,24 @@
+# Gradle and build output
+.gradle/
+build/
+**/build/
+
+# Local Android SDK path
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+
+# Signing material and service credentials
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+
+# Generated Android artifacts
+*.apk
+*.aab
+captures/
+output-metadata.json
